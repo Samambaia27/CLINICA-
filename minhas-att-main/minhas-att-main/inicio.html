@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Clínica Feminina</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<header>
+    <nav class="navbar">
+      <div class="logo">Ser Mulher</div>  
+      <ul id="navbar-links">
+        <li><a href="inicio.html">Sobre Nós</a></li>
+        <li><a href="#servicos">Serviços</a></li>
+        <li><a href="equipe.html">Equipe</a></li>
+        <li><a href="login.html">Login</a></li>
+        <li><a href="agendamento.html" class="cta-button">Agendar Consulta</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <script>
+    // Função para alternar o menu em dispositivos móveis
+    function toggleMenu() {
+      const navbarLinks = document.getElementById('navbar-links');
+      navbarLinks.classList.toggle('show');
+    }
+
+      // Função para adicionar a classe 'transparent' à navbar quando o usuário rolar a página
+  window.onscroll = function() {
+    const navbar = document.querySelector('.navbar');
+    if (window.pageYOffset > 50) { // A partir de 50px de rolagem
+      navbar.classList.add('transparent'); // Adiciona a classe para torná-la transparente
+    } else {
+      navbar.classList.remove('transparent'); // Remove a classe quando voltar ao topo
+    }
+  };
+
+  </script>
+
+<section id="about" class="about">
+    <div class="container">
+        <h2>Sobre Nós</h2>
+        <p>Somos uma clínica especializada em saúde feminina, oferecendo cuidados personalizados e acolhedores em todas as fases da vida. Com uma equipe dedicada, promovemos bem-estar e qualidade de vida para nossas pacientes.</p>
+    </div>
+    <video src="img/video_gravida.mp4" autoplay loop muted></video>
+</section>
+
+    <section id="services" class="services">
+        <div class="container">
+            <h2>Serviços</h2>
+            <div class="service-list">
+                <div class="service">
+                    <h3>Ginecologia</h3>
+                    <p>Atendimento especializado para a saúde íntima da mulher.</p>
+                    <button><a class="link" href="ginecologia.html">Saiba mais</a></button>
+                </div>
+                <div class="service">
+                    <h3>Obstetrícia</h3>
+                    <p>Cuidado completo durante a gestação e pós-parto.</p>
+                    <button><a class="link" href="obstetricia.html">Saiba mais</a></button>
+                </div>
+                <div class="service">
+                    <h3>Dermatologia</h3>
+                    <p>Tratamentos de pele com foco na saúde e beleza feminina.</p>
+                    <button><a class="link" href="derma.html">Saiba mais</a></button>
+                </div>
+                <div class="service">
+                    <h3>Nutrição</h3>
+                    <p>Planejamento alimentar personalizado para diferentes fases da vida.</p>
+                    <button><a class="link" href="nutricao.html">Saiba mais</a></button>
+                </div>
+                <div class="service">
+                    <h3>Fisioterapia Pélvica</h3>
+                    <p>Tratamentos para fortalecimento e reabilitação do assoalho pélvico.</p>
+                    <button><a class="link" href="fisio-p.html">Saiba mais</a></button>
+                </div>
+                <div class="service">
+                    <h3>Psicologia</h3>
+                    <p>Apoio psicológico com foco na saúde emocional e mental.</p>
+                    <button><a class="link" href="psicologia.html">Saiba mais</a></button>
+                </div>
+                <div class="service">
+                    <h3>Endocrinologia</h3>
+                    <p>Diagnóstico e tratamento de distúrbios hormonais.</p>
+                    <button><a class="link" href="endocrinologia.html">Saiba mais</a></button>
+                </div>
+                <div class="service">
+                    <h3>Mastologia</h3>
+                    <p>Prevenção, diagnóstico e tratamento de doenças das mamas.</p>
+                    <button><a class="link" href="mastologia.html">Saiba mais</a></button>
+                </div>
+                <div class="service">
+                    <h3>Cardiologia</h3>
+                    <p>Cuidado especializado para a saúde do coração.</p>
+                    <button><a class="link" href="cardiologia.html">Saiba mais</a></button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-left">
+                    <p>&copy; 2025 Clínica Feminina. Todos os direitos reservados.</p>
+                </div>
+                <div class="footer-center">
+                    <ul class="footer-links">
+                        <li><a href="#sobre">Sobre</a></li>
+                        <li><a href="#servicos">Serviços</a></li>
+                        <li><a href="#equipe">Equipe</a></li>
+                        <li><a href="#contato">Contato</a></li>
+                    </ul>
+                </div>
+                <div class="footer-right">
+                    <ul class="social-links">
+                        <li><a href="#" target="_blank">Facebook</a></li>
+                        <li><a href="#" target="_blank">Instagram</a></li>
+                        <li><a href="#" target="_blank">LinkedIn</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </footer>
+</body>
+</html>

@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Clínica Feminina</title>
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        p {
+            text-align: justify;
+            margin-bottom: 20px;
+        }
+        .image-container {
+            display: flex;
+            gap: 65px; /* Espaço entre as imagens */
+            justify-content: center; /* Alinha horizontalmente ao centro */
+            align-items: center; /* Alinha verticalmente ao centro */
+        }
+
+        .image-container img {
+            width: 250px; /* Largura da imagem */
+            height: auto;
+            border: 2px solid #ccc; /* Bordas opcionais */
+            border-radius: 8px; /* Borda arredondada */
+            justify-content: center; /* Alinha horizontalmente ao centro */
+            align-items: center; /* Alinha verticalmente ao centro */
+        }
+
+        .topics {
+        text-align: center;
+        margin: 40px auto;
+        padding: 20px;
+        background-color: #fdf4f8;
+        border-radius: 10px;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        max-width: 800px;
+        }
+
+        .topics h3 {
+            color: #ff6f91;
+            margin-bottom: 15px;
+            font-size: 1.8rem;
+        }
+
+        .topics ul {
+            list-style-type: disc;
+            margin: 20px 0;
+            padding: 0 20px;
+            text-align: left;
+            color: #555;
+        }
+
+        .topics ul li {
+            margin-bottom: 10px;
+        }
+
+        .cta-button-text {
+            display: inline-block;
+            margin-top: 20px;
+            background-color: #e85a77;
+            color: #fff;
+            font-weight: bold;
+            padding: 10px 20px;
+            border-radius: 5px;
+            text-decoration: none;
+            transition: background-color 0.3s ease, transform 0.3s ease;
+        }
+
+        .cta-button-text:hover {
+            background-color: #d14965;
+            transform: translateY(-3px);
+        }
+
+    </style>
+</head>
+<header>
+    <nav class="navbar">
+      <div class="logo">Ser Mulher</div>  
+      <ul id="navbar-links">
+        <li><a href="inicio.html">Sobre Nós</a></li>
+        <li><a href="#servicos">Serviços</a></li>
+        <li><a href="equipe.html">Equipe</a></li>
+        <li><a href="login.html">Login</a></li>
+        <li><a href="agendamento.html" class="cta-button">Agendar Consulta</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <script>
+    // Função para alternar o menu em dispositivos móveis
+    function toggleMenu() {
+      const navbarLinks = document.getElementById('navbar-links');
+      navbarLinks.classList.toggle('show');
+    }
+
+      // Função para adicionar a classe 'transparent' à navbar quando o usuário rolar a página
+  window.onscroll = function() {
+    const navbar = document.querySelector('.navbar');
+    if (window.pageYOffset > 50) { // A partir de 50px de rolagem
+      navbar.classList.add('transparent'); // Adiciona a classe para torná-la transparente
+    } else {
+      navbar.classList.remove('transparent'); // Remove a classe quando voltar ao topo
+    }
+  };
+
+  </script>
+
+<section id="about" class="about">
+    <div class="container">
+        <h2>Cardiologia</h2>
+        <p>A cardiologia é a especialidade médica responsável pelo diagnóstico, tratamento e prevenção de doenças do coração e do sistema cardiovascular. Essa área abrange uma ampla gama de condições, incluindo hipertensão, insuficiência cardíaca, arritmias, infarto do miocárdio, doenças das válvulas cardíacas e aterosclerose. O cardiologista é o médico especializado em cuidar da saúde do coração, realizando exames clínicos e testes específicos, como eletrocardiogramas, ecocardiogramas e testes de esforço, para monitorar a função cardíaca e identificar possíveis problemas.
+
+            Além do tratamento de doenças já diagnosticadas, o cardiologista também atua na prevenção, orientando os pacientes sobre hábitos de vida saudáveis, como a prática regular de exercícios, uma alimentação balanceada e o controle de fatores de risco, como o tabagismo, o consumo excessivo de álcool e o estresse. O acompanhamento contínuo de pessoas com histórico familiar de doenças cardíacas ou com fatores de risco também é uma parte fundamental da cardiologia, ajudando a evitar complicações graves, como infartos e derrames.
+            
+            Em casos de doenças cardíacas avançadas, o cardiologista pode recomendar intervenções, como o uso de medicamentos, procedimentos cirúrgicos ou procedimentos minimamente invasivos, como a angioplastia. O objetivo é garantir que o paciente tenha uma vida longa e saudável, com o coração funcionando de maneira eficaz e sem comprometer a qualidade de vida. O cuidado integral da cardiologia envolve um acompanhamento contínuo, com exames regulares e orientação sobre prevenção e tratamento, promovendo a saúde cardiovascular ao longo dos anos.</p>
+    </div>
+
+    <div class="image-container">
+      <img src="img/cardiologia.jfif" alt="Imagem 1">
+      <img src="img/dfdb81d2-b2e1-4d0f-821e-9f4c9f71d6f5.jfif" alt="Imagem 2">
+      <img src="img/medicine aesthetic 🩺💕.jfif" alt="Imagem 3">
+  </div>
+
+  <div class="topics">
+    <h3>Por que se consultar com um Cardiologista?</h3>
+    <ul>
+        <li>Prevenção e diagnóstico de doenças cardíacas, como infarto e insuficiência cardíaca.</li>
+        <li>Acompanhamento do controle da pressão arterial e tratamento da hipertensão.</li>
+        <li>Orientação sobre hábitos saudáveis para a saúde cardiovascular, como alimentação e exercício físico.</li>
+        <li>Monitoramento de fatores de risco para doenças do coração, como colesterol elevado e diabetes.</li>
+    </ul>
+    <a href="agendamento.html" class="cta-button-text">Agende Agora</a>
+</div>
+</section>
+
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-left">
+                    <p>&copy; 2025 Clínica Feminina. Todos os direitos reservados.</p>
+                </div>
+                <div class="footer-center">
+                    <ul class="footer-links">
+                        <li><a href="#sobre">Sobre</a></li>
+                        <li><a href="#servicos">Serviços</a></li>
+                        <li><a href="#equipe">Equipe</a></li>
+                        <li><a href="#contato">Contato</a></li>
+                    </ul>
+                </div>
+                <div class="footer-right">
+                    <ul class="social-links">
+                        <li><a href="#" target="_blank">Facebook</a></li>
+                        <li><a href="#" target="_blank">Instagram</a></li>
+                        <li><a href="#" target="_blank">LinkedIn</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </footer>
+</body>
+</html>

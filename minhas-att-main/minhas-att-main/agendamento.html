@@ -1,0 +1,285 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Clínica Feminina</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<header>
+    <nav class="navbar">
+      <div class="logo">Ser Mulher</div>  
+      <ul id="navbar-links">
+        <li><a href="inicio.html">Sobre Nós</a></li>
+        <li><a href="#servicos">Serviços</a></li>
+        <li><a href="equipe.html">Equipe</a></li>
+        <li><a href="login.html">Login</a></li>
+        <li><a href="#agendar" class="cta-button">Agendar Consulta</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <script>
+    // Função para alternar o menu em dispositivos móveis
+    function toggleMenu() {
+      const navbarLinks = document.getElementById('navbar-links');
+      navbarLinks.classList.toggle('show');
+    }
+
+      // Função para adicionar a classe 'transparent' à navbar quando o usuário rolar a página
+  window.onscroll = function() {
+    const navbar = document.querySelector('.navbar');
+    if (window.pageYOffset > 50) { // A partir de 50px de rolagem
+      navbar.classList.add('transparent'); // Adiciona a classe para torná-la transparente
+    } else {
+      navbar.classList.remove('transparent'); // Remove a classe quando voltar ao topo
+    }
+  };
+
+  </script>
+  <script>
+    // script.js
+document.addEventListener("DOMContentLoaded", () => {
+    const form = document.getElementById("appointment-form");
+    const successMessage = document.getElementById("success-message");
+
+    form.addEventListener("submit", (event) => {
+        event.preventDefault();
+
+        // Validações adicionais podem ser feitas aqui
+
+        successMessage.classList.remove("hidden");
+        form.reset();
+    });
+});
+  </script>
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+
+    <style>
+        body {
+            font-family: "Times New Roman", Times, serif;
+            background-color: #fff;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            min-height: 100vh;
+            color: #333;
+            text-align: center;
+        }
+
+        header {
+            color: #ff6f91;
+            padding: 20px 0;
+            width: 100%;
+            background-color: #fff;
+        }
+
+        header h1 {
+            margin: 0;
+            font-size: 3em;
+        }
+
+        .appointment-section {
+            width: 100%;
+            max-width: 1600px;
+            padding: 20px;
+        }
+
+        .appointment-form {
+            background-color: #fff;
+            padding: 50px;
+            border-radius: 10px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            text-align: left;
+            margin: 0 auto;
+            width: 90%;
+        }
+
+        .appointment-form h2 {
+            color: #ff6f91;
+            margin-bottom: 20px;
+            text-align: center;
+        }
+
+        .form-group {
+            margin-bottom: 20px;
+        }
+
+        .form-group label {
+            display: block;
+            font-weight: bold;
+            margin-bottom: 10px;
+            color: #333;
+        }
+
+        .form-group input, .form-group select, .form-group textarea {
+            width: 100%;
+            padding: 15px;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+            font-family: "Times New Roman", Times, serif;
+        }
+
+        .form-group textarea {
+            resize: none;
+        }
+
+        .btn-submit {
+            background-color: #ff6f91;
+            color: #fff;
+            border: none;
+            padding: 15px 20px;
+            border-radius: 4px;
+            cursor: pointer;
+            font-size: 18px;
+            display: block;
+            width: 100%;
+            text-transform: uppercase;
+        }
+
+        .btn-submit:hover {
+            background-color: #ff5075;
+        }
+
+        .success-message {
+            text-align: center;
+            color: #28a745;
+            font-weight: bold;
+            margin-top: 20px;
+            display: none;
+        }
+
+        footer {
+            margin-top: 20px;
+            font-size: 14px;
+            color: #ff6f91;
+        }
+    </style>
+    <script>
+        document.addEventListener("DOMContentLoaded", () => {
+            const form = document.querySelector(".appointment-form");
+            const successMessage = document.createElement("div");
+            successMessage.className = "success-message";
+            successMessage.textContent = "Consulta agendada com sucesso!";
+            form.parentNode.appendChild(successMessage);
+
+            form.addEventListener("submit", (event) => {
+                event.preventDefault();
+
+                // Validações extras podem ser feitas aqui
+                const name = document.getElementById("name").value;
+                const email = document.getElementById("email").value;
+                const phone = document.getElementById("phone").value;
+                const date = document.getElementById("date").value;
+
+                if (!name || !email || !phone || !date) {
+                    alert("Por favor, preencha todos os campos obrigatórios.");
+                    return;
+                }
+
+                successMessage.style.display = "block";
+                form.reset();
+            });
+        });
+    </script>
+</head>
+<body>
+    <header>
+        <h1>Saúde Feminina</h1>
+    </header>
+
+    <main>
+        <section class="appointment-section">
+            <form action="#" method="post" class="appointment-form">
+                <h2>Agende sua consulta</h2>
+                <p>Preencha o formulário abaixo para marcar sua consulta com nossas especialistas.</p>
+
+                <div class="form-group">
+                    <label for="name">Nome completo</label>
+                    <input type="text" id="name" name="name" required>
+                </div>
+
+                <div class="form-group">
+                    <label for="email">E-mail</label>
+                    <input type="email" id="email" name="email" required>
+                </div>
+
+                <div class="form-group">
+                    <label for="phone">Telefone</label>
+                    <input type="tel" id="phone" name="phone" required>
+                </div>
+
+                <div class="form-group">
+                    <label for="date">Data da consulta</label>
+                    <input type="date" id="date" name="date" required>
+                </div>
+
+                <div class="form-group">
+                    <label for="specialty">Especialidade</label>
+                    <select id="specialty" name="specialty" required>
+                        <option value="">Selecione uma especialidade</option>
+                        <option value="ginecologia">Ginecologia</option>
+                        <option value="obstetricia">Obstetrícia</option>
+                        <option value="nutricao">Dermatologia</option>
+                        <option value="psicologia">Nutrição</option>
+                        <option value="ginecologia">Fisioterapia Pélvica</option>
+                        <option value="obstetricia">Psicologia</option>
+                        <option value="nutricao">Endocrinologia</option>
+                        <option value="psicologia">Mastologia</option>
+                        <option value="psicologia">Cardiologia</option>
+                    </select>
+                </div>
+
+                <div class="form-group">
+                    <label for="message">Mensagem ou observações</label>
+                    <textarea id="message" name="message" rows="5"></textarea>
+                </div>
+
+                <button type="submit" class="btn-submit">Agendar</button>
+            </form>
+        </section>
+    </main>
+
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-left">
+                    <p>&copy; 2025 Clínica Feminina. Todos os direitos reservados.</p>
+                </div>
+                <div class="footer-center">
+                    <ul class="footer-links">
+                        <li><a href="#sobre">Sobre</a></li>
+                        <li><a href="#servicos">Serviços</a></li>
+                        <li><a href="#equipe">Equipe</a></li>
+                        <li><a href="#contato">Contato</a></li>
+                    </ul>
+                </div>
+                <div class="footer-right">
+                    <ul class="social-links">
+                        <li><a href="#" target="_blank">Facebook</a></li>
+                        <li><a href="#" target="_blank">Instagram</a></li>
+                        <li><a href="#" target="_blank">LinkedIn</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </footer>
+</body>
+</html>
